@@ -1,3 +1,5 @@
+/* gcc -o sniffer sniffer.c -lpcap */
+
 #include <pcap.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,8 +9,6 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <ctype.h> // idk why
-
-/* gcc -o sniffer script.c -lpcap */
 
 void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
 void print_packet(const u_char *packet, int len);

@@ -8,7 +8,7 @@
 #include <arpa/inet.h>
 #include <ctype.h> // idk why
 
-/* gcc -o sniffer script.c -lpcap */
+/* gcc -o sniffer sniffer.c -lpcap */
 
 void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
 void print_packet(const u_char *packet, int len);
